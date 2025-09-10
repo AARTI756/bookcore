@@ -1,0 +1,66 @@
+/* src/pages/HomePageSearch.css */
+
+/* --- Live Search Results Dropdown --- */
+.search-results-container {
+    position: absolute;
+    top: calc(100% + 10px); /* Position below search bar */
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px); /* Match search bar width (assuming 20px padding on each side) */
+    max-width: 660px; /* Max width to match hero section content */
+    background: var(--bg-card); /* Card background */
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 20px var(--shadow-medium);
+    z-index: 100; /* Ensure it's above other content */
+    max-height: 300px; /* Limit height and make it scrollable */
+    overflow-y: auto;
+    text-align: left; /* Ensure text aligns left within results */
+    padding: 10px 0;
+}
+
+.search-message {
+    padding: 10px 20px;
+    color: var(--text-medium);
+    text-align: center;
+}
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: background-color var(--transition-speed) ease;
+}
+
+.search-result-item:hover {
+    background-color: var(--bg-secondary-section); /* Hover background */
+}
+
+.search-result-image {
+    width: 50px;
+    height: 75px; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    margin-right: 15px;
+    flex-shrink: 0;
+    box-shadow: 0 1px 5px var(--shadow-light);
+}
+
+.search-result-details {
+    flex-grow: 1;
+}
+
+.search-result-details h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.search-result-details p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-medium);
+}

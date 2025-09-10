@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* --- CSS VARIABLES FOR THEMING (LIGHT MODE BY DEFAULT) --- */
+:root {
+    /* Colors based on your requirements */
+    --primary-blue: #007bff;
+    --primary-blue-dark: #0056b3;
+    --gradient-start: #007bff;
+    --gradient-end: #00bcd4;
+
+    /* Backgrounds */
+    --bg-main: #f8f9fa;
+    --bg-card: #ffffff;
+    --bg-secondary-section: #e9ecef;
+
+    /* Text Colors */
+    --text-dark: #212529;
+    --text-medium: #495057;
+    --text-light: #f8f9fa;
+
+    /* Borders & Shadows */
+    --border-color: #dee2e6;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+    --shadow-strong: rgba(0, 0, 0, 0.25);
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-circle: 50%;
+
+    /* Transitions */
+    --transition-speed: 0.3s;
+
+    /* Navbar Height (for content calculation) */
+    --navbar-height: 80px; /* Adjust if your navbar height changes */
+}
+
+/* --- DARK MODE THEME --- */
+body.dark-mode {
+    --primary-blue: #4dabf7;
+    --primary-blue-dark: #1e88e5;
+    --gradient-start: #1e88e5;
+    --gradient-end: #4dabf7;
+
+    --bg-main: #1a1a1a;
+    --bg-card: #2c2c2c;
+    --bg-secondary-section: #3a3a3a;
+
+    --text-dark: #e0e0e0;
+    --text-medium: #b0b0b0;
+    --text-light: #212529;
+
+    --border-color: #444444;
+    --shadow-light: rgba(0, 0, 0, 0.3);
+    --shadow-medium: rgba(0, 0, 0, 0.45);
+    --shadow-strong: rgba(0, 0, 0, 0.6);
+}
+
+/* --- BASE STYLES --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, #root { /* Ensure #root also takes full height */
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-dark);
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+
+p {
+    color: var(--text-medium);
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+/* --- UTILITY CLASSES --- */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+}
+
+/* --- LAYOUT WRAPPER FOR PAGES --- */
+.app-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page-content {
+    flex-grow: 1; /* Ensures content takes available space */
+    padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+/* --- Animations --- */
+@keyframes pulse {
+    0% { transform: scale(0.98); box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7); }
+    70% { transform: scale(1.02); box-shadow: 0 0 0 15px rgba(0, 123, 255, 0); }
+    100% { transform: scale(0.98); box-shadow: 0 0 0 0 rgba(0, 123, 255, 0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar styling for a cleaner look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark);
+}
