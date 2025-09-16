@@ -28,8 +28,6 @@ import BookDetailPage from './pages/BookDetailPage';
 // --- Import Global CSS ---
 import './App.css';
 import './components/Navbar.css';
-import './components/AdminLayout.css'; // Ensure this CSS is correctly imported for the admin sidebar
-
 // Google Client ID (from your Google Cloud Console)
 const googleClientId = "906978735051-9uo1jek6ofucneoe63348844v0kgoq2v.apps.googleusercontent.com"; // Your Client ID
 
@@ -108,8 +106,6 @@ const AppRoutes = () => {
                     <Route path="add-book" element={<AdminAddBookPage />} />
                     <Route path="edit-book/:id" element={<AdminEditBookPage />} />
                     <Route path="users" element={<AdminUsersPage />} />
-                    <Route path="analytics" element={<h1>Admin Analytics Page (Coming Soon)</h1>} />
-                    <Route path="settings" element={<h1>Admin Settings Page (Coming Soon)</h1>} />
                 </Route>
                 
                 {/* Catch-all 404 Page */}

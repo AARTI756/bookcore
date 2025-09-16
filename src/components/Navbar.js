@@ -32,8 +32,9 @@ const Navbar = () => {
             <div className="navbar-links">
                 {/* These links are always visible for all users/guests */}
                 <NavLink to="/">Home</NavLink>
-                <NavLink to="/borrow-books">Borrow Books</NavLink>
-
+                {!user || (user && user.role !== 'admin') ? (
+                   <NavLink to="/borrow-books">Borrow Books</NavLink>
+                ) : null}
                 {user ? (
                     <>
                         {user.role === 'admin' ? ( // Admin specific links
@@ -41,7 +42,6 @@ const Navbar = () => {
                             </>
                         ) : ( // Regular user links
                             <>
-                <NavLink to="/profile">Profile</NavLink>
             </>
                         )}
                         <button onClick={logout} className="logout-button">Logout</button>

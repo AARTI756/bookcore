@@ -5,22 +5,14 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import './HomePage.css';
 import './HomePageSearch.css';
-import { FaMicrophone } from 'react-icons/fa'; // Keep for potential future use
-import {
-    BsLightningChargeFill, BsCartCheckFill, BsHeadset, BsPeopleFill,
-    BsShieldLockFill, BsLaptop, BsLightbulb, BsGraphUpArrow
-} from 'react-icons/bs';
+import { BsLightningChargeFill, BsHeadset, BsShieldLockFill, BsLaptop } from 'react-icons/bs';
 import { getBooks, searchBooks } from '../firebase/firestoreService';
 
 const featuresData = [
     { icon: <BsLightningChargeFill />, title: "Instant Book Borrowing", text: "Access and borrow books from our vast digital library in a single click." },
-    { icon: <BsCartCheckFill />, title: "Easy Purchase", text: "Own your favorite books forever with our seamless and secure purchase options." },
     { icon: <BsHeadset />, title: "24x7 Service Access", text: "Our library never closes. Read anytime, anywhere, on your schedule." },
-    { icon: <BsPeopleFill />, title: "Community Reviews", text: "Engage with fellow readers, share insights, and find your next book." },
     { icon: <BsShieldLockFill />, title: "Secure & Private", text: "Your reading data is yours alone. We prioritize your privacy with top-tier security." },
     { icon: <BsLaptop />, title: "Multi-device Sync", text: "Start reading on your tablet and continue on your phone. Your progress is always saved." },
-    { icon: <BsLightbulb />, title: "Smart Recommendations", text: "Get personalized book suggestions powered by AI that match your interests." },
-    { icon: <BsGraphUpArrow />, title: "Reading Analytics", text: "Track your reading time, pace, and preferences to improve your habits." },
 ];
 
 const HomePage = () => {
