@@ -167,7 +167,7 @@ const HomePage = () => {
                         <input 
                             type="text" 
                             className="search-input" 
-                            placeholder="AI-powered search for books, authors, or genres..."
+                            placeholder="Search for books, authors, or genres..."
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />

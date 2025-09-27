@@ -279,47 +279,26 @@ export const borrowBook = async (userId, bookId, daysToBorrow) => {
 
 
 // --- EXPORTED: markBookAsReturned ---
-export const markBookAsReturned = async (userId, bookId, borrowedDate) => {
-  const userDocRef = doc(db, "users", userId);
-  const bookDocRef = doc(db, "books", bookId);
+export const markBookAsReturned = async (userId, bookId) => {
+  const userRef = doc(db, "users", userId);
+  const userSnap = await getDoc(userRef);
 
-  await runTransaction(db, async (transaction) => {
-    const userDoc = await transaction.get(userDocRef);
-    const bookDoc = await transaction.get(bookDocRef);
+  if (!userSnap.exists()) {
+    throw new Error("User not found in Firestore");
+  }
 
-    if (!userDoc.exists()) { throw new Error("User not found."); }
-    if (!bookDoc.exists()) { throw new Error("Book not found for return."); }
+  const userData = userSnap.data();
+  const borrowedBooks = userData.borrowedBooks || [];
 
-    const userData = userDoc.data();
-    let borrowedBooks = userData.borrowedBooks || [];
-
-    const itemToUpdate = borrowedBooks.find(
-      item => item.book && item.book.id === bookId && 
-              item.borrowDate && item.borrowDate.toDate().getTime() === borrowedDate.toDate().getTime()
-    );
-
-    if (!itemToUpdate) { throw new Error("Borrowed book entry not found for this user/borrowDate."); }
-    if (itemToUpdate.returnDate) { throw new Error("Book already marked as returned."); }
-
-    transaction.update(bookDocRef, { isAvailable: true });
-
-    const updatedItem = {
-      ...itemToUpdate,
-      returnDate: new Date(),
-      readingProgress: 100
-    };
-    transaction.update(userDocRef, {
-      borrowedBooks: arrayRemove(itemToUpdate)
-    });
-    transaction.update(userDocRef, {
-      borrowedBooks: arrayUnion(updatedItem)
-    });
-
-    if (!itemToUpdate.returnDate) {
-      transaction.update(userDocRef, {
-        totalBooksRead: (userData.totalBooksRead || 0) + 1,
-      });
+  // Find the borrowed book
+  const updatedBooks = borrowedBooks.map(book => {
+    if (book.book.id === bookId && !book.returnDate) {
+      return { ...book, returnDate: new Date() }; // Add return date
     }
+    return book;
   });
-  console.log(`Firestore: Book ${bookId} returned by user ${userId}.`);
+
+  await updateDoc(userRef, {
+    borrowedBooks: updatedBooks
+  });
 };

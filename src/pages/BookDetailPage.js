@@ -1,21 +1,19 @@
-// src/pages/BookDetailPage.js - FINAL Corrected Version (All Errors/Warnings Fixed)
+// src/pages/BookDetailPage.js - FINAL Corrected Version (with fixed recommendations)
 
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate, useLocation, Link } from 'react-router-dom'; // <-- CRITICAL: ADD Link here
+import { useParams, useNavigate, useLocation, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import './BookDetailPage.css';
-import { getBookById, borrowBook } from '../firebase/firestoreService'; // getBookById, borrowBook are used
-// --- CRITICAL: Add specific Firestore functions for recommendations ---
-import { collection, query, where, limit, getDocs } from 'firebase/firestore'; // <-- ADD these
-import { db } from '../firebaseConfig'; // Import db instance
-// --- END CRITICAL IMPORTS ---
+import { getBookById, borrowBook } from '../firebase/firestoreService';
+import { collection, query, where, limit, getDocs } from 'firebase/firestore';
+import { db } from '../firebaseConfig';
 
 const BookDetailPage = () => {
     const { id } = useParams();
     const [book, setBook] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [recommendedBooks, setRecommendedBooks] = useState([]); // State for recommendations
+    const [recommendedBooks, setRecommendedBooks] = useState([]);
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -42,24 +40,25 @@ const BookDetailPage = () => {
         }
     }, [id]);
 
-    // NEW useEffect to fetch recommendations when book is unavailable
+    // ✅ Fixed recommendation logic
     useEffect(() => {
         const fetchRecommendations = async () => {
-            if (!book || book.isAvailable) { // Only fetch if book is set and is unavailable
-                setRecommendedBooks([]); // Clear old recs if book becomes available
+            if (!book || book.isAvailable) {
+                setRecommendedBooks([]);
                 return;
             }
             try {
-                // Query for 3-5 available books of the same genre, excluding the current book
                 const q = query(
                     collection(db, "books"),
-                    where("genre", "==", book.genre), // Same genre
-                    where("isAvailable", "==", true), // Must be available
-                    where("id", "!=", book.id), // Exclude current book
-                    limit(5) // Get up to 5 recommendations
+                    where("genre", "==", book.genre),
+                    where("isAvailable", "==", true),
+                    limit(5)
                 );
-                const querySnapshot = await getDocs(q); // <-- getDocs is used here
-                const recs = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+                const querySnapshot = await getDocs(q);
+                const recs = querySnapshot.docs
+                    .map(doc => ({ id: doc.id, ...doc.data() }))
+                    .filter(recBook => recBook.id !== book.id); // ✅ filter out current book
+
                 setRecommendedBooks(recs);
             } catch (err) {
                 console.error("Error fetching recommendations:", err);
@@ -67,14 +66,13 @@ const BookDetailPage = () => {
             }
         };
 
-        // Only fetch recommendations if book data is loaded and it's currently unavailable
         if (!loading && book && !book.isAvailable) {
             fetchRecommendations();
         }
-    }, [book, loading]); // Re-fetch recommendations when book data or loading state changes
+    }, [book, loading]);
 
     const handleBorrowClick = () => {
-        if (authLoading) { return; }
+        if (authLoading) return;
 
         if (!user) {
             alert('Please log in to borrow this book.');
@@ -96,7 +94,7 @@ const BookDetailPage = () => {
             borrowBook(user.uid, book.id, daysToBorrow)
                 .then(() => {
                     alert(`"${book.title}" borrowed successfully for ${daysToBorrow} days! Check your dashboard.`);
-                    setBook(prev => ({ ...prev, isAvailable: false })); // Optimistic update
+                    setBook(prev => ({ ...prev, isAvailable: false }));
                 })
                 .catch(err => {
                     console.error("Error borrowing book:", err);
@@ -128,7 +126,6 @@ const BookDetailPage = () => {
                     {book.publishedYear && <p className="book-year">Published: {book.publishedYear}</p>}
                     <p className="book-description">{book.description}</p>
 
-                    {/* Display availability status */}
                     <p className="book-availability" style={{ color: book.isAvailable ? 'green' : 'red' }}>
                         {book.isAvailable ? 'Available' : 'Currently Rented'}
                     </p>
@@ -143,18 +140,20 @@ const BookDetailPage = () => {
                                 Currently Rented
                             </button>
                         )}
-                        {/* Display recommended books if current book is unavailable */}
+
                         {!book.isAvailable && recommendedBooks.length > 0 && (
                             <div className="recommendations-on-unavailable">
-                                <p style={{ color: 'var(--text-dark)', fontWeight: '600', marginBottom: '10px' }}>This book is currently rented. Try these:</p>
+                                <p style={{ color: 'var(--text-dark)', fontWeight: '600', marginBottom: '10px' }}>
+                                    This book is currently rented. Try these:
+                                </p>
                                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
                                     {recommendedBooks.map(recBook => (
                                         <Link to={`/books/${recBook.id}`} key={recBook.id} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                            <span style={{ 
-                                                border: '1px solid var(--border-color)', 
-                                                padding: '5px 10px', 
-                                                borderRadius: '5px', 
-                                                color: 'var(--text-medium)', 
+                                            <span style={{
+                                                border: '1px solid var(--border-color)',
+                                                padding: '5px 10px',
+                                                borderRadius: '5px',
+                                                color: 'var(--text-medium)',
                                                 background: 'var(--bg-secondary)',
                                                 whiteSpace: 'nowrap',
                                                 overflow: 'hidden',
