@@ -14,6 +14,8 @@ const firebaseConfig = {
   measurementId: "G-7CHJMJET3D"
 };
 
+
+
 const app = initializeApp(firebaseConfig);
 
 // Export Firebase services you'll use
