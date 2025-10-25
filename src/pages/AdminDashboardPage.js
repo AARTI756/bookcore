@@ -236,11 +236,17 @@ const GenreDonut = ({ data }) => {
       {
         data: data.map((d) => d.count),
         backgroundColor: [
-          "#36A2EB",
-          "#FF6384",
-          "#FFCE56",
-          "#4BC0C0",
-          "#9966FF",
+          "#396a8bff",
+          "#f58099ff",
+          "#cda131ff",
+          "#f98452ff",
+          "#bb99ffff",
+          "#36dbbcff",
+          "#40d663ff",
+          "#d34196ff",
+          "#fa4545ff",
+          "#5713f7ff",
+          "#f5f57cff",
         ],
       },
     ],
@@ -265,7 +271,8 @@ const PopularGenresPie = ({ data }) => {
     datasets: [
       {
         data: data.map((d) => d.count),
-        backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0"],
+        backgroundColor: ["#fd7996ff", "#7cc6f8ff", "#f1d283ff", "#99f5f5ff", "#945dcfff", "#fcab5aff", 
+          "#8df1aeff" , "#6e154dff",  "#233c4bff", "#7958f1ff"],
       },
     ],
   };

@@ -138,7 +138,7 @@ const DashboardPage = () => {
     value: count,
   }));
 
-  const COLORS = ['#0088FE', '#FF8042', '#00C49F', '#FFBB28', '#AF19FF'];
+  const COLORS = ['#0088FE', '#FF8042', '#00C49F', '#f4bf4dff', '#AF19FF', '#f81436ff', '#511ef9ff', '#00E396',  '#f334a6ff'];
 
   const handleResumeReading = (pdfUrl) => {
     if (pdfUrl) {
@@ -228,13 +228,13 @@ const DashboardPage = () => {
         {/* 🎭 Genres Distribution */}
         <div className="dashboard-card">
           <h2>Genres Distribution</h2>
-          <ResponsiveContainer width="100%" height={250}>
+          <ResponsiveContainer width="100%" height={330}>
             <PieChart>
               <Pie
                 data={genreData}
                 dataKey="value"
                 cx="50%"
-                cy="50%"
+                cy="40%"
                 outerRadius={80}
                 label
               >
@@ -248,7 +248,6 @@ const DashboardPage = () => {
           </ResponsiveContainer>
         </div>
 
-        {/* 📖 Continue Reading */}
         {/* 📖 Continue Reading */}
 <div className="dashboard-card dashboard-full-width-card">
   <h2>Continue Reading</h2>

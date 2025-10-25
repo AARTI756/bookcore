@@ -1,70 +1,142 @@
-# Getting Started with Create React App
+# 📚 Bookcore  
+_A Cloud-Based Book Borrowing and Management System_
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/Frontend-React.js-61DAFB?logo=react)
+![Firebase](https://img.shields.io/badge/Backend-Firebase-FFCA28?logo=firebase)
+![TailwindCSS](https://img.shields.io/badge/UI-TailwindCSS-38B2AC?logo=tailwind-css)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Build](https://img.shields.io/badge/Build-Passing-brightgreen)
+![Status](https://img.shields.io/badge/Status-Active-blue)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🧠 Overview
 
-### `npm start`
+**Bookcore** is a **cloud-based book borrowing and management platform** that transforms traditional library systems into efficient, paperless digital environments.  
+Developed using **React.js**, **Firebase**, and **TailwindCSS**, it provides real-time synchronization, secure role-based access, and insightful analytics for both users and administrators.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Features
 
-### `npm test`
+- 🔐 **Secure Authentication** using Firebase Auth (User & Admin roles)  
+- 🔄 **Real-Time Updates** for borrow/return transactions  
+- 📊 **Admin Analytics Dashboard** with visual charts  
+- ☁️ **Serverless Architecture** powered by Firebase  
+- 📱 **Fully Responsive UI** built with TailwindCSS  
+- 🔍 **Smart Search & Filter** for quick book discovery  
+- ⚡ **Continuous Deployment** with Vercel hosting  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🧩 Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Layer | Technology |
+|-------|-------------|
+| **Frontend** | React.js (v18) |
+| **Styling** | TailwindCSS |
+| **Backend** | Firebase Firestore (NoSQL) |
+| **Authentication** | Firebase Auth |
+| **Storage** | Firebase Cloud Storage |
+| **Hosting** | Vercel |
+| **Testing Tools** | Jest, Lighthouse, Chrome DevTools |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚙️ Installation & Setup
 
-### `npm run eject`
+Clone and set up the project locally:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/AARTI756/bookcore
+cd bookcore
+npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+🔧 Firebase Configuration
+Create a Firebase project and enable:
+Firestore Database
+Authentication (Email/Password)
+Storage
+Replace your Firebase config inside src/firebase.js:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Start the development server:
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm start
+Visit: http://localhost:3000
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+🔒 Security
+Firebase Auth tokens for session management
+Firestore Security Rules for access control
+HTTPS encryption
+Role-based permissions for admin and users
 
-### Analyzing the Bundle Size
+📸 Screenshots
+Login	
+![alt text](image-3.png)
+Register	
+![alt text](image-4.png)
+Home	
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
+Book List
+![alt text](image-15.png)
+Borrow Book	
+![alt text](image-14.png)
+![alt text](image-17.png)
+![alt text](image-18.png)
+Return Book
+![alt text](image-9.png)
+Admin Dashboard	
+![alt text](image.png)
+![alt text](image-16.png)
+User Profile
+![alt text](image-7.png)
+![alt text](image-8.png)
+![alt text](image-10.png)
+![alt text](image-11.png)
+![alt text](image-12.png)
+![alt text](image-13.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+📈 Future Enhancements
+🤖 AI-based Book Recommendations
 
-### Making a Progressive Web App
+🧾 QR/Barcode Borrowing System
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+🌍 Offline-ready PWA
 
-### Advanced Configuration
+🔗 Academic API Integrations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+🌐 Multilingual & Accessible UI
 
-### Deployment
+🪙 Blockchain-enabled Borrow History
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+👩‍💻 Author
+Aarti Sakpal
+Third-Year Computer Engineering Student
+Vidyalankar Institute of Technology, Mumbai, India
+📧 aarti.sakpal@vit.edu.in
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+© 2025 Aarti Sakpal
+Developed as part of the Cloud Computing and Web Technologies project at VIT Mumbai.
+
+
+
+
+
+
+
