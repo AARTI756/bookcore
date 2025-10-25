@@ -5,7 +5,6 @@
 ![React](https://img.shields.io/badge/Frontend-React.js-61DAFB?logo=react)
 ![Firebase](https://img.shields.io/badge/Backend-Firebase-FFCA28?logo=firebase)
 ![TailwindCSS](https://img.shields.io/badge/UI-TailwindCSS-38B2AC?logo=tailwind-css)
-![License](https://img.shields.io/badge/License-MIT-green)
 ![Build](https://img.shields.io/badge/Build-Passing-brightgreen)
 ![Status](https://img.shields.io/badge/Status-Active-blue)
 
