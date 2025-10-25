@@ -86,6 +86,51 @@ const firebaseConfig = {
 
 ---
 
+## 👥 Roles & Permissions
+
+### **1. Admin**
+
+The admin has full control over the system and can manage both books and users. Key functionalities include:
+
+* 📚 **Book Management**
+
+  * Add new books to the library
+  * Edit book details (title, author, genre, availability)
+  * Delete books from the system
+
+* 🧑‍💻 **User Management**
+
+  * View all registered users
+  * Manage user roles and permissions
+
+* 🔄 **Transaction Oversight**
+
+  * Monitor all borrow and return transactions
+
+* 📊 **Analytics & Reports**
+
+  * Access dashboard with visual charts of library usage, popular books, and active users
+
+---
+
+### **2. Student / User**
+
+The student or user can interact with the system to borrow and return books. Key functionalities include:
+
+* 🔍 **Search & Discover**
+
+  * Search for books by title, author, or genre
+  * Filter books by availability
+
+* 📖 **Borrow & Return**
+
+  * Request to borrow available books
+  * Return borrowed books
+
+* 👤 **Profile Management**
+
+  * View personal borrow history
+
 ## 📸 Screenshots
 
 ### 🔑 Login
