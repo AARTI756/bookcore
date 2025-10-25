@@ -197,12 +197,6 @@ The student or user can interact with the system to borrow and return books. Key
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
 ## 👩‍💻 Author
 
 **Aarti Sakpal**
