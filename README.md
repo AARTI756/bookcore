@@ -84,9 +84,10 @@ Role-based permissions for admin and users
 
 📸 Screenshots
 Login	
-![alt text](image-3.png)
+<img width="1904" height="738" alt="image" src="https://github.com/user-attachments/assets/b0caf263-ad67-44e2-a6b3-6391aba0e2d8" />
+
 Register	
-![alt text](image-4.png)
+<img width="1911" height="732" alt="image" src="https://github.com/user-attachments/assets/61a842a4-e16e-4d95-81c3-8920b0c4ace6" />
 Home	
 ![alt text](image-1.png)
 ![alt text](image-2.png)
