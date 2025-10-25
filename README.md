@@ -85,8 +85,7 @@ Role-based permissions for admin and users
 ## 📸 Screenshots
 
 ### 🔑 Login
-[![Login](https://github.com/user-attachments/assets/b0caf263-ad67-44e2-a6b3-6391aba0e2d8)
-](https://github.com/AARTI756/bookcore/blob/master/public/assets/screenshots/image-3.png)
+![Login](https://github.com/AARTI756/bookcore/blob/master/public/assets/screenshots/image-3.png)
 
 ### 🧾 Register
 ![Register](https://github.com/user-attachments/assets/61a842a4-e16e-4d95-81c3-8920b0c4ace6)
