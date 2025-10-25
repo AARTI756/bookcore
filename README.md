@@ -131,6 +131,8 @@ The student or user can interact with the system to borrow and return books. Key
 
   * View personal borrow history
 
+---
+
 ## 📸 Screenshots
 
 ### 🔑 Login
@@ -175,6 +177,12 @@ The student or user can interact with the system to borrow and return books. Key
 ![User Profile 4](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-11.png)
 ![User Profile 5](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-12.png)
 ![User Profile 6](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-13.png)
+
+---
+
+
+## 🎥 Project Demo
+[Watch the demo video](https://github.com/AARTI756/bookcore/blob/master/bookcore.mp4)
 
 ---
 
