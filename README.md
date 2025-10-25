@@ -82,36 +82,43 @@ Firestore Security Rules for access control
 HTTPS encryption
 Role-based permissions for admin and users
 
-📸 Screenshots
-Login	
-[![Login](https://github.com/user-attachments/assets/b0caf263-ad67-44e2-a6b3-6391aba0e2d8)
-](https://github.com/AARTI756/bookcore/blob/master/public/assets/screenshots/image-3.png)
+## 📸 Screenshots
 
-Register	
-<img width="1911" height="732" alt="image" src="https://github.com/user-attachments/assets/61a842a4-e16e-4d95-81c3-8920b0c4ace6" />
-Home	
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-5.png)
-![alt text](image-6.png)
-Book List
-![alt text](image-15.png)
-Borrow Book	
-![alt text](image-14.png)
-![alt text](image-17.png)
-![alt text](image-18.png)
-Return Book
-![alt text](image-9.png)
-Admin Dashboard	
-![alt text](image.png)
-![alt text](image-16.png)
-User Profile
-![alt text](image-7.png)
-![alt text](image-8.png)
-![alt text](image-10.png)
-![alt text](image-11.png)
-![alt text](image-12.png)
-![alt text](image-13.png)
+### 🔑 Login
+![Login](https://github.com/user-attachments/assets/b0caf263-ad67-44e2-a6b3-6391aba0e2d8)
+
+### 🧾 Register
+![Register](https://github.com/user-attachments/assets/61a842a4-e16e-4d95-81c3-8920b0c4ace6)
+
+### 🏠 Home
+![Home](public/assets/screenshots/image-1.png)
+![Home Alt](public/assets/screenshots/image-2.png)
+![Home Extra](public/assets/screenshots/image-5.png)
+![Home Layout](public/assets/screenshots/image-6.png)
+
+### 📚 Book List
+![Book List](public/assets/screenshots/image-15.png)
+
+### 📖 Borrow Book
+![Borrow Book](public/assets/screenshots/image-14.png)
+![Borrow Book 2](public/assets/screenshots/image-17.png)
+![Borrow Book 3](public/assets/screenshots/image-18.png)
+
+### 🔁 Return Book
+![Return Book](public/assets/screenshots/image-9.png)
+
+### 🧮 Admin Dashboard
+![Admin Dashboard](public/assets/screenshots/image.png)
+![Admin Dashboard Alt](public/assets/screenshots/image-16.png)
+
+### 👤 User Profile
+![User Profile](public/assets/screenshots/image-7.png)
+![User Profile 2](public/assets/screenshots/image-8.png)
+![User Profile 3](public/assets/screenshots/image-10.png)
+![User Profile 4](public/assets/screenshots/image-11.png)
+![User Profile 5](public/assets/screenshots/image-12.png)
+![User Profile 6](public/assets/screenshots/image-13.png)
+
 
 📈 Future Enhancements
 🤖 AI-based Book Recommendations
