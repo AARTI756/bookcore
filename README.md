@@ -88,36 +88,54 @@ Role-based permissions for admin and users
 ![Login](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-3.png)
 
 ### 🧾 Register
-![Register](https://github.com/user-attachments/assets/61a842a4-e16e-4d95-81c3-8920b0c4ace6)
+![Register](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-4.png
+)
 
 ### 🏠 Home
-![Home](public/assets/screenshots/image-1.png)
-![Home Alt](public/assets/screenshots/image-2.png)
-![Home Extra](public/assets/screenshots/image-5.png)
-![Home Layout](public/assets/screenshots/image-6.png)
+![Home](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-1.png
+)
+![Home Alt](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-2.png
+)
+![Home Extra](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-5.png
+)
+![Home Layout](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-6.png
+)
 
 ### 📚 Book List
-![Book List](public/assets/screenshots/image-15.png)
+![Book List](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-15.png
+)
 
 ### 📖 Borrow Book
-![Borrow Book](public/assets/screenshots/image-14.png)
-![Borrow Book 2](public/assets/screenshots/image-17.png)
-![Borrow Book 3](public/assets/screenshots/image-18.png)
+![Borrow Book](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-14.png
+)
+![Borrow Book 2](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-17.png
+)
+![Borrow Book 3](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-18.png
+)
 
 ### 🔁 Return Book
-![Return Book](public/assets/screenshots/image-9.png)
+![Return Book](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-9.png
+)
 
 ### 🧮 Admin Dashboard
-![Admin Dashboard](public/assets/screenshots/image.png)
-![Admin Dashboard Alt](public/assets/screenshots/image-16.png)
+![Admin Dashboard](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image.png
+)
+![Admin Dashboard Alt](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-16.png
+)
 
 ### 👤 User Profile
-![User Profile](public/assets/screenshots/image-7.png)
-![User Profile 2](public/assets/screenshots/image-8.png)
-![User Profile 3](public/assets/screenshots/image-10.png)
-![User Profile 4](public/assets/screenshots/image-11.png)
-![User Profile 5](public/assets/screenshots/image-12.png)
-![User Profile 6](public/assets/screenshots/image-13.png)
+![User Profile](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-7.png
+)
+![User Profile 2](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-10.png
+)
+![User Profile 3](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-8.png
+)
+![User Profile 4](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-11.png
+)
+![User Profile 5](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-12.png
+)
+![User Profile 6]([public/assets/screenshots/image-13.png](https://raw.githubusercontent.com/AARTI756/bookcore/master/public/assets/screenshots/image-13.png
+)
 
 
 📈 Future Enhancements
