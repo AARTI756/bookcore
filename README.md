@@ -51,6 +51,7 @@ Clone the project and install dependencies:
 git clone https://github.com/AARTI756/bookcore
 cd bookcore
 npm install
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 npm start
 ```
 
@@ -126,11 +127,6 @@ The student or user can interact with the system to borrow and return books. Key
   * Request to borrow available books
   * Return borrowed books
 
-* 👤 **Profile Management**
-
-  * View personal borrow history
-
----
 
 ## 📸 Screenshots
 
@@ -193,16 +189,4 @@ The student or user can interact with the system to borrow and return books. Key
 * 🔗 Academic API Integrations
 * 🌐 Multilingual & Accessible UI
 * 🪙 Blockchain-enabled Borrow History
-
----
-
-## 👩‍💻 Author
-
-**Aarti Sakpal**
-Third-Year Computer Engineering Student
-Vidyalankar Institute of Technology, Mumbai, India
-📧 [aarti.sakpal@vit.edu.in](mailto:aarti.sakpal@vit.edu.in)
-
-© 2025 Aarti Sakpal
-Developed as part of the Cloud Computing and Web Technologies project at VIT Mumbai.
 

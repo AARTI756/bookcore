@@ -279,6 +279,7 @@ export const borrowBook = async (userId, bookId, daysToBorrow) => {
 
 
 // --- EXPORTED: markBookAsReturned ---
+
 export const markBookAsReturned = async (userId, bookId) => {
   const userRef = doc(db, "users", userId);
   const userSnap = await getDoc(userRef);
@@ -290,15 +291,20 @@ export const markBookAsReturned = async (userId, bookId) => {
   const userData = userSnap.data();
   const borrowedBooks = userData.borrowedBooks || [];
 
-  // Find the borrowed book
+  // Update the borrowedBooks array
   const updatedBooks = borrowedBooks.map(book => {
     if (book.book.id === bookId && !book.returnDate) {
-      return { ...book, returnDate: new Date() }; // Add return date
+      return { ...book, returnDate: new Date() }; // Mark returned
     }
     return book;
   });
 
+  // Update user document
   await updateDoc(userRef, {
     borrowedBooks: updatedBooks
   });
+
+  // ✅ Also update the book document to make it available again
+  const bookRef = doc(db, "books", bookId);
+  await updateDoc(bookRef, { isAvailable: true });
 };
