@@ -190,3 +190,14 @@ The student or user can interact with the system to borrow and return books. Key
 * 🌐 Multilingual & Accessible UI
 * 🪙 Blockchain-enabled Borrow History
 
+## 👩‍💻 Author
+
+**Aarti Sakpal**  
+🎓 Computer Engineering Student  
+🏫 Vidyalankar Institute of Technology, Mumbai  
+📧 [aarti.sakpal@vit.edu.in](mailto:aarti.sakpal@vit.edu.in)  
+
+---
+
+© 2025 Aarti Sakpal  
+Developed as part of the **Cloud Computing and Web Technologies Project** at **VIT Mumbai**.
